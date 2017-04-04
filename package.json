@@ -1,0 +1,19 @@
+{
+  "name": "drinkery",
+  "version": "0.1.0",
+  "description": "Find the recipe of your favorite drink.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlippincott/drinkery.git"
+  },
+  "author": "Terry Lippincott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlippincott/drinkery/issues"
+  },
+  "homepage": "https://github.com/tlippincott/drinkery#readme"
+}

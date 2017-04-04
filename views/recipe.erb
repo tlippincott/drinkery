@@ -1,0 +1,6 @@
+<% @liquor_ingredients.each do |liquor| %>
+    <h3><%= liquor.measure %> <%= liquor.liquor.name %></h3>
+<% end %>
+<% @mixer_ingredients.each do |mixer| %>
+    <h3><%= mixer.measure %> <%= mixer.mixer.name %></h3>
+<% end %>
