@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
       erb :home
     else
-      @message = "Please show your ID and log in first."
+      @noLogin = true
 
       erb :login
     end
