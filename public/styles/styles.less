@@ -51,6 +51,7 @@
 @body-bg: #c1bdba;
 @form-bg: #13232f;
 @white: #fff;
+@black: #000;
 
 @main: #baab8f;
 @main-light: lighten(@main,10%);
@@ -283,7 +284,10 @@ a {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .form {
-  background: lighten(@form-bg,10%);
+  //background: lighten(@form-bg,10%);
+  background-image: url("/images/whiskey_glass.jpg");
+  background-position: center;
+  background-size: cover;
   padding: 0;
   max-width: 500px;
   margin: 40px auto;
@@ -371,7 +375,7 @@ input, textarea {
   width: 100%;
   height: 100%;
   padding: 5px 10px;
-  background: none;
+  background: rgba(0, 0, 0, 0.3);
   background-image: none;
   border: 2px solid @main;
   color: @white;
