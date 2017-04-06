@@ -1,23 +1,25 @@
 class HomeController < ApplicationController
 
+  # all routes begin with /home
+
   get '/' do
+    @newlogin = true
+
     if session[:logged_in]
       @username = session[:username]
 
       erb :home
     else
-      @noLogin = true
+      @message = 'Welcome!'
 
       erb :login
     end
   end
 
   get '/login' do
-    erb :login
-  end
+    @message = 'Welcome'
 
-  get '/register' do
-    erb :register
+    erb :login
   end
 
   get '/logout' do
@@ -36,23 +38,37 @@ class HomeController < ApplicationController
       session[:username] = username
       session[:user_id] = user.id
 
-      redirect '/home'
+      erb :main
     else
       @message = "Hey beer goggles, wrong username or password."
+      @newlogin = false
 
       erb :login
     end
   end
 
   post '/register' do
-    user = User.new
+    username = params[:username]
+    password = params[:password]
 
-    user.username = params["username"]
-    user.password = params["password"]
+    user = User.find_by(username: username)
+    if user
+      @message = "Username is already taken. Take a shot and try again."
+      @newlogin = false
 
-    user.save
+      erb :login
+    else
+      user = User.new
 
-    redirect '/home/login'
+      user.username = username
+      user.password = password
+
+      user.save
+
+      erb :main
+
+    end
+
   end
 
 end

@@ -1,9 +1,5 @@
 <div class="form">
 
-      <div class="logo">
-        <img src="/images/drinkery_logo.png" />
-      </div>
-
       <ul class="tab-group">
         <li class="tab active"><a href="#login">Log In</a></li>
         <li class="tab"><a href="#signup">Sign Up!</a></li>
@@ -15,15 +11,19 @@
 
           <div class="message">
 
-            <% if @noLogin %>
+            <% if @newlogin %>
 
-              <h1>Welcome!</h1>
+              <h1 class="newlogin"><%= @message %></h1>
+
+            <% else %>
+
+              <h3 class="badlogin"><%= @message %></h3>
 
             <% end %>
 
           </div>  <!-- message -->
 
-          <form action="/" method="POST">
+          <form action="/home/login" method="POST">
 
             <div class="field-wrap">
             <label>
@@ -49,13 +49,13 @@
 
         <div id="signup">
 
-            <div class="message">
+            <div class="register">
 
               <h1>Sign Up</h1>
 
             </div>
 
-          <form action="/" method="POST">
+          <form action="/home/register" method="POST">
 
           <div class="field-wrap">
             <label>

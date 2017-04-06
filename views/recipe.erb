@@ -1,20 +1,21 @@
-<div class="container">
-    <div class="row">
+<div class="form">
 
-        <div class="six columns">
+    <div class="container">
+        <div class="row">
 
-<% @liquor_ingredients.each do |liquor| %>
-    <h3><%= liquor.measure %> <%= liquor.liquor.name %></h3>
-<% end %>
+            <div class="twelve columns">
+
+                <% @liquor_ingredients.each do |liquor| %>
+                    <h3><%= liquor.measure %> <%= liquor.liquor.name %></h3>
+                <% end %>
+
+                <% @mixer_ingredients.each do |mixer| %>
+                    <h3><%= mixer.measure %> <%= mixer.mixer.name %></h3>
+                <% end %>
+
+            </div>
 
         </div>
-
-        <div class="six columns">
-<% @mixer_ingredients.each do |mixer| %>
-    <h3><%= mixer.measure %> <%= mixer.mixer.name %></h3>
-<% end %>
-
-        </div>
-
     </div>
+
 </div>
