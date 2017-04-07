@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
   has_secure_password
-  has_many :drinks
-  has_many :favorites
+  has_many :user_favorites
 
 end

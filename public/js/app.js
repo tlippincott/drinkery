@@ -41,3 +41,21 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(600);
 
 });
+
+$('.send-id').on('click', function() {
+  var drinkid = $('.send-id').data('id');
+
+  $.ajax({
+    url: '/favorite',
+    type: 'POST',
+    datatype: 'JSON',
+    data: {id: drinkid},
+    success: function(result) {
+      $('.send-id').html('Drink Saved as a Favorite');
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  })
+
+});

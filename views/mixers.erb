@@ -1,0 +1,18 @@
+<div class="form">
+
+        <div class="tab-content">
+
+            <% @mixer.each do |mixer| %>
+
+            <form action="/mixer/drinks" method="POST">
+                <div class="field-wrap">
+                    <input type="hidden" name="id" value="<%= mixer.id %>" />
+                    <input type="submit" name="mixername" value="<%= mixer.name %>"/>
+                </div>
+            </form>
+
+            <% end %>
+
+        </div>
+
+</div>

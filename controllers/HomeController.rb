@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     if session[:logged_in]
       @username = session[:username]
 
-      erb :home
+      redirect '/home/main'
     else
       @message = 'Welcome!'
 
@@ -20,6 +20,10 @@ class HomeController < ApplicationController
     @message = 'Welcome'
 
     erb :login
+  end
+
+  get '/main' do
+    erb :main
   end
 
   get '/logout' do
@@ -38,7 +42,7 @@ class HomeController < ApplicationController
       session[:username] = username
       session[:user_id] = user.id
 
-      erb :main
+      redirect '/home/main'
     else
       @message = "Hey beer goggles, wrong username or password."
       @newlogin = false
@@ -65,7 +69,7 @@ class HomeController < ApplicationController
 
       user.save
 
-      erb :main
+      redirect '/home/main'
 
     end
 

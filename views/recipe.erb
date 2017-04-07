@@ -5,12 +5,20 @@
 
             <div class="twelve columns">
 
+                <button class="button button-block send-id" data-id="<%= @drink.id %>">Save as Favorite</button>
+
+            </div>
+
+            <div class="twelve columns recipe">
+
+                <h3><%= @drink.name %></h3>
+
                 <% @liquor_ingredients.each do |liquor| %>
-                    <h3><%= liquor.measure %> <%= liquor.liquor.name %></h3>
+                    <p><%= liquor.measure %> <%= liquor.liquor.name %></p>
                 <% end %>
 
                 <% @mixer_ingredients.each do |mixer| %>
-                    <h3><%= mixer.measure %> <%= mixer.mixer.name %></h3>
+                    <p><%= mixer.measure %> <%= mixer.mixer.name %></p>
                 <% end %>
 
             </div>

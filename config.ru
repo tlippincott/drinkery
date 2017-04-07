@@ -8,3 +8,5 @@ map('/') {run ApplicationController}
 map('/home') {run HomeController}
 map('/drink') {run DrinkController}
 map('/liquor') {run LiquorController}
+map('/mixer') {run MixerController}
+map('/favorite') {run FavoriteController}
