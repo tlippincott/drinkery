@@ -37,6 +37,8 @@ class FavoriteController < ApplicationController
 
         UserFavorite.where({user_id: session[:user_id], drink_id: user_drink_id}).delete_all
 
+        'Success'
+
     end
 
 end
