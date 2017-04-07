@@ -1,11 +1,15 @@
-<div class="form">
+<div class="form bartender-bg">
 
     <div class="container">
         <div class="row">
 
             <div class="twelve columns">
 
-                <button class="button button-block send-id" data-id="<%= @drink.id %>">Save as Favorite</button>
+                <% if @user_favorite %>
+                    <button class="button button-block send-id" data-id="<%= @drink.id %>">Delete from Favorites</button>
+                <% else %>
+                    <button class="button button-block send-id" data-id="<%= @drink.id %>">Save as Favorite</button>
+                <% end %>
 
             </div>
 

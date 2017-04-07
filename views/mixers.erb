@@ -1,18 +1,24 @@
-<div class="form">
+<div class="form drink-bg">
 
-        <div class="tab-content">
+    <div class="header">
 
-            <% @mixer.each do |mixer| %>
+        <h3>Click to View Drinks made with Selected Mixer</h3>
 
-            <form action="/mixer/drinks" method="POST">
-                <div class="field-wrap">
-                    <input type="hidden" name="id" value="<%= mixer.id %>" />
-                    <input type="submit" name="mixername" value="<%= mixer.name %>"/>
-                </div>
-            </form>
+    </div>
 
-            <% end %>
+    <div class="tab-content">
 
-        </div>
+        <% @mixer.each do |mixer| %>
+
+        <form action="/mixer/drinks" method="POST">
+            <div class="field-wrap">
+                <input type="hidden" name="id" value="<%= mixer.id %>" />
+                <input type="submit" name="mixername" value="<%= mixer.name %>"/>
+            </div>
+        </form>
+
+        <% end %>
+
+    </div>
 
 </div>

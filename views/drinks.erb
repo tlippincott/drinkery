@@ -1,18 +1,24 @@
-<div class="form">
+<div class="form drink-bg">
 
-        <div class="tab-content">
+    <div class="header">
 
-            <% @drink.each do |drink| %>
+        <h3>Click to View Recipe</h3>
 
-            <form action="/drink/recipe" method="POST">
-                <div class="field-wrap">
-                    <input type="hidden" name="id" value="<%= drink[:id] %>" />
-                    <input type="submit" name="drinkname" value="<%= drink[:name] %>"/>
-                </div>
-            </form>
+    </div>
 
-            <% end %>
+    <div class="tab-content">
 
-        </div>
+        <% @drink.each do |drink| %>
+
+        <form action="/drink/recipe" method="POST">
+            <div class="field-wrap">
+                <input type="hidden" name="id" value="<%= drink[:id] %>" />
+                <input type="submit" name="drinkname" value="<%= drink[:name] %>"/>
+            </div>
+        </form>
+
+        <% end %>
+
+    </div>
 
 </div>

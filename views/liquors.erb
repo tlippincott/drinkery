@@ -1,18 +1,24 @@
-<div class="form">
+<div class="form drink-bg">
 
-        <div class="tab-content">
+    <div class="header">
 
-            <% @liquor.each do |liquor| %>
+        <h3>Click to View Drinks made with Selected Spirit</h3>
 
-            <form action="/liquor/drinks" method="POST">
-                <div class="field-wrap">
-                    <input type="hidden" name="id" value="<%= liquor.id %>" />
-                    <input type="submit" name="liquorname" value="<%= liquor.name %>"/>
-                </div>
-            </form>
+    </div>
 
-            <% end %>
+    <div class="tab-content">
 
-        </div>
+        <% @liquor.each do |liquor| %>
+
+        <form action="/liquor/drinks" method="POST">
+            <div class="field-wrap">
+                <input type="hidden" name="id" value="<%= liquor.id %>" />
+                <input type="submit" name="liquorname" value="<%= liquor.name %>"/>
+            </div>
+        </form>
+
+        <% end %>
+
+    </div>
 
 </div>

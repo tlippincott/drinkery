@@ -12,7 +12,7 @@ class FavoriteController < ApplicationController
 
         @drink.to_json
 
-        erb :drinks
+        erb :favorite
 
     end
 

@@ -291,14 +291,26 @@ a:hover {
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .form {
-  background-image: url("/images/whiskey_glass.jpg");
-  background-position: center;
-  background-size: cover;
   padding: 0;
   max-width: 500px;
   height: 450px;
   margin: 0 auto;
   overflow: auto;
+}
+.whiskey-bg {
+  background-image: url("/images/whiskey_glass.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.bartender-bg {
+  background-image: url("/images/bartender.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.drink-bg {
+  background-image: url("/images/drink.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .tab-content {
   padding: 10px 40px;
@@ -342,7 +354,7 @@ label {
   transform: translateY(6px);
   left: 13px;
   color: #ffffff;
-  transition: all 0.25s ease;
+  transition: all 0.1s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
@@ -377,7 +389,7 @@ textarea {
   width: 100%;
   height: 100%;
   padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
   background-image: none;
   border: 2px solid #baab8f;
   color: #fff;
@@ -494,6 +506,12 @@ form {
 }
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+  padding: 0 7px;
+}
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -546,7 +564,7 @@ hr {
   width: 100%;
   height: 100%;
   padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
   background-image: none;
   border: 2px solid #baab8f;
   color: #fff;

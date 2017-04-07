@@ -12,9 +12,19 @@
     <div class="logo">
         <img class="applogo" src="/images/drinkery_logo.png" />
 
-        <div class="homeicon">
-            <a href='/home/main'><img class="homeimage" src="/images/homepage-icon.png" /></a>
-        </div>
+        <% if session[:logged_in] %>
+
+            <div class="homeicon">
+                <a href='/home/main'><img class="homeimage" src="/images/homepage-icon.png" /></a>
+            </div>
+
+        <% else %>
+
+            <div class="homeicon">
+                <a href='/home/main'><img style="opacity: 0;" class="homeimage" src="/images/homepage-icon.png" /></a>
+            </div>
+
+        <% end %>
 
     </div>
 
