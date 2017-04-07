@@ -6,7 +6,7 @@
             <div class="twelve columns">
 
                 <% if @user_favorite %>
-                    <button class="button button-block send-id" data-id="<%= @drink.id %>">Delete from Favorites</button>
+                    <button class="button button-block delete-id" data-id="<%= @drink.id %>">Remove from Favorites</button>
                 <% else %>
                     <button class="button button-block send-id" data-id="<%= @drink.id %>">Save as Favorite</button>
                 <% end %>

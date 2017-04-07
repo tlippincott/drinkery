@@ -32,8 +32,10 @@ class FavoriteController < ApplicationController
         #
     end
 
-    delete '/:id' do
-        id = params[:id]
+    delete '/' do
+        user_drink_id = params[:id]
+
+        UserFavorite.where({user_id: session[:user_id], drink_id: user_drink_id}).delete_all
 
     end
 

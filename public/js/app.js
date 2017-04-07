@@ -51,7 +51,27 @@ $('.send-id').on('click', function() {
     datatype: 'JSON',
     data: {id: drinkid},
     success: function(result) {
-      $('.send-id').html('Drink Saved as a Favorite');
+      $('.send-id').addClass("delete-id").removeClass("send-id");
+      $('.delete-id').html('Remove from Favorites');
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  })
+
+});
+
+$('.delete-id').on('click', function() {
+  var drinkid = $('.delete-id').data('id');
+
+  $.ajax({
+    url: '/favorite',
+    type: 'DELETE',
+    datatype: 'JSON',
+    data: {id: drinkid},
+    success: function(result) {
+      $('.delete-id').addClass("send-id").removeClass("delete-id");
+      $('.send-id').html('Save as Favorite');
     },
     error: function(error) {
       console.log(error);
