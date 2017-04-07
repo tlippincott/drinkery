@@ -1,7 +1,7 @@
 # drinkery
 App to find the recipe of your favorite drink.
 
-[Wireframes for this project](Drinks Screens.png)
+[Wireframes for this project](Drink_Up.pdf)
 
 User Stories
 
