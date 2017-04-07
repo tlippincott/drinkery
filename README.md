@@ -1,9 +1,9 @@
-# drinkery
-App to find the recipe of your favorite drink.
+# the drinkery
+This is an application to find the ingredients of your favorite drink. You can search by type of liquor or mixer found in the drink, or you can compose your own list of favorite drinks.
 
 [Wireframes for this project](Drink_Up.pdf)
 
-User Stories
+## User Stories
 
 1. The user should be able to enter an existing username and password, click the Log In button and be routed to the main page.
 
@@ -23,7 +23,7 @@ User Stories
 
 9. The user should be able to click on the Remove from Favorites button and have the listed drink removed from their favorites list. The drink should not appear on the Favorites page.
 
-Technologies Utilized
+## Technologies Utilized
 
 1. Sinatra
 2. ActiveRecord
