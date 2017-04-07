@@ -51,7 +51,7 @@ $('.send-id').on('click', function() {
     datatype: 'JSON',
     data: {id: drinkid},
     success: function(result) {
-      $('.send-id').addClass("delete-id").removeClass("send-id");
+      $('.send-id').addClass('delete-id').removeClass('send-id');
       $('.delete-id').html('Remove from Favorites');
     },
     error: function(error) {
@@ -70,7 +70,7 @@ $('.delete-id').on('click', function() {
     datatype: 'JSON',
     data: {id: drinkid},
     success: function(result) {
-      $('.delete-id').addClass("send-id").removeClass("delete-id");
+      $('.delete-id').addClass('send-id').removeClass('delete-id');
       $('.send-id').html('Save as Favorite');
     },
     error: function(error) {
