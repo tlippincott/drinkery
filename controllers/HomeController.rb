@@ -17,6 +17,8 @@ class HomeController < ApplicationController
   end
 
   get '/login' do
+    @newlogin = true
+
     @message = 'Welcome'
 
     erb :login
