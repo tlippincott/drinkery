@@ -1,6 +1,8 @@
 # the drinkery
 This is an application to find the ingredients of your favorite drink. You can search by type of liquor or mixer found in the drink, or you can compose your own list of favorite drinks.
 
+https://the-drinkery.herokuapp.com/home
+
 [Wireframes for this project](Drink_Up.pdf)
 
 ## User Stories
